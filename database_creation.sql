@@ -122,3 +122,9 @@ create table delivery(
     FOREIGN KEY (did) REFERENCES deliveryboy(did) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (payid) REFERENCES payment(payid) ON UPDATE CASCADE ON DELETE CASCADE
 );
+create table department(
+    depid int not null unique, 
+    name varchar(255) not null,
+    dephead varchar(255) not null,
+    primary key (depid)
+);
